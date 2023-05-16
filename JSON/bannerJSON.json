@@ -1,10 +1,8 @@
-[{
-	"imageUrlsLowRes": [
-		"SWA/wallImagesLowRes/ggg1100.png",
+{
+  "imageUrlsLowRes": [
+    "SWA/wallImagesLowRes/ggg1100.png",
 		"SWA/wallImagesLowRes/ggg1099.png",
 		"SWA/wallImagesLowRes/ggg1098.png"
-	],
-	"imageOneTitle": "Image One Title!",
-	"imageOneSubTitle": "Image One Subtitle"
-}]
+  ]
+}
 
