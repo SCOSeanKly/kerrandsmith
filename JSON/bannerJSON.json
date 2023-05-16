@@ -1,17 +1,7 @@
-
 {
-    "imageData": [
-        {
-            "imageUrl":  "SWA/wallImagesLowRes/ggg1100.png",
-            "title": "Astra 1.3CDTi",
-            "subtitle": "1.3 PureTech Diesel Engine - Edition 5dr",
-            "buttonText": "Enquire Now"
-        },
-        {
-             "imageUrl":  "SWA/wallImagesLowRes/ggg1099.png",
-            "title": "Another Image Title",
-            "subtitle": "Another Image Subtitle",
-            "buttonText": "Another Button Text"
-        }
-    ]
+  "imageUrlsLowRes": [
+    "SWA/wallImagesLowRes/ggg1100.png",
+		"SWA/wallImagesLowRes/ggg1099.png",
+		"SWA/wallImagesLowRes/ggg1098.png"
+  ]
 }
