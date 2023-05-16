@@ -1,14 +1,8 @@
 {
-	"images": [{
-			"imageUrl":  "SWA/wallImagesLowRes/ggg1100.png",
-			"title": "Title for Image 1",
-			"subtitle": "Subtitle for Image 1"
-		},
-		{
-			"imageUrl": "SWA/wallImagesLowRes/ggg1099.png",
-			"title": "Title for Image 2",
-			"subtitle": "Subtitle for Image 2"
-		}
-	]
+  "imageUrlsLowRes": [
+    "SWA/wallImagesLowRes/ggg1100.png",
+		"SWA/wallImagesLowRes/ggg1099.png",
+		"SWA/wallImagesLowRes/ggg1098.png"
+  ]
 }
 
