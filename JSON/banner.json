@@ -1,22 +1,22 @@
 {
   "images": [
     {
-      "imageUrlLowRes": "ggg1100.png",
+      "imageName": "ggg1100.png",
       "title": "Image 1",
       "subtitle": "Description of image 1"
     },
     {
-      "imageUrlLowRes": "ggg1099.png",
+      "imageName": "ggg1099.png",
       "title": "Image 2",
       "subtitle": "Description of image 2"
     },
     {
-      "imageUrlLowRes": "ggg1098.png",
+      "imageName": "ggg1098.png",
       "title": "Image 3",
       "subtitle": "Description of image 3"
     },
     {
-      "imageUrlLowRes": "ggg1100.png",
+      "imageName": "ggg1100.png",
       "title": "Image 1",
       "subtitle": "Description of image 1"
     }
