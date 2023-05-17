@@ -3,22 +3,42 @@
     {
       "imageName": "SsangYong1.jpg",
       "title": "New Tivoli now in stock!",
-      "subtitle": "A great all rounder with 5yrs warrany"
+      "subtitle": "A great all-rounder with 5 years warranty",
+      "image1": "SsangYong2.jpg",
+      "image2": "SsangYong2.jpg",
+      "image3": "SsangYong2.jpg",
+      "image4": "SsangYong2.jpg",
+      "image5": "SsangYong2.jpg"
     },
     {
       "imageName": "SsangYong2.jpg",
       "title": "Image 2",
-      "subtitle": "Description of image 2"
+      "subtitle": "Description of image 2",
+      "image1": "additional_image_6.jpg",
+      "image2": "additional_image_7.jpg",
+      "image3": "additional_image_8.jpg",
+      "image4": "additional_image_9.jpg",
+      "image5": "additional_image_10.jpg"
     },
     {
       "imageName": "SsangYong3.jpg",
       "title": "Image 3",
-      "subtitle": "Description of image 3"
+      "subtitle": "Description of image 3",
+      "image1": "additional_image_11.jpg",
+      "image2": "additional_image_12.jpg",
+      "image3": "additional_image_13.jpg",
+      "image4": "additional_image_14.jpg",
+      "image5": "additional_image_15.jpg"
     },
     {
       "imageName": "SsangYong4.jpg",
       "title": "Image 1",
-      "subtitle": "Description of image 1"
+      "subtitle": "Description of image 1",
+      "image1": "additional_image_16.jpg",
+      "image2": "additional_image_17.jpg",
+      "image3": "additional_image_18.jpg",
+      "image4": "additional_image_19.jpg",
+      "image5": "additional_image_20.jpg"
     }
   ]
 }
