@@ -2,23 +2,43 @@
   "images": [
     {
       "imageName": "SsangYong1.jpg",
-      "title": "Trailer 1 Title",
-      "subtitle": "Description of trailer 1"
+      "title": "Trailer Title",
+      "subtitle": "Trailer Sub_Title",
+      "image1": "SsangYong2.jpg",
+      "image2": "SsangYong3.jpg",
+      "image3": "SsangYong4.jpg",
+      "image4": "SsangYong1.jpg",
+      "image5": "SsangYong2.jpg"
     },
     {
-      "imageName": "SsangYong2.jpg",
-      "title": "Trailer 2 Title",
-      "subtitle": "Description of trailer 2"
+      "imageName": "SsangYong1.jpg",
+      "title": "Trailer Title",
+      "subtitle": "Trailer Sub_Title",
+      "image1": "SsangYong2.jpg",
+      "image2": "SsangYong3.jpg",
+      "image3": "SsangYong4.jpg",
+      "image4": "SsangYong1.jpg",
+      "image5": "SsangYong2.jpg"
     },
-    {
-      "imageName": "SsangYong3.jpg",
-      "title": "Trailer 3 Title",
-      "subtitle": "Description of trailer 3"
+     {
+      "imageName": "SsangYong1.jpg",
+      "title": "Trailer Title",
+      "subtitle": "Trailer Sub_Title",
+      "image1": "SsangYong2.jpg",
+      "image2": "SsangYong3.jpg",
+      "image3": "SsangYong4.jpg",
+      "image4": "SsangYong1.jpg",
+      "image5": "SsangYong2.jpg"
     },
-    {
-      "imageName": "SsangYong4.jpg",
-      "title": "Trailer 4 Title",
-      "subtitle": "Description of trailer 1"
+     {
+      "imageName": "SsangYong1.jpg",
+      "title": "Trailer Title",
+      "subtitle": "Trailer Sub_Title",
+      "image1": "SsangYong2.jpg",
+      "image2": "SsangYong3.jpg",
+      "image3": "SsangYong4.jpg",
+      "image4": "SsangYong1.jpg",
+      "image5": "SsangYong2.jpg"
     }
   ]
 }
