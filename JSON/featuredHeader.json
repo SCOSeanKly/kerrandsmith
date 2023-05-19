@@ -1,14 +1,5 @@
-{
-	"images": [
-    {
-			"image": "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/SsangYong2.jpg",
-			"title": "Image 1",
-			"subtitle": "Subtitle 1"
-		},
-		{
-			"image": "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/SsangYong3.jpg",
-			"title": "Image 2",
-			"subtitle": "Subtitle 2"
-		}
-	]
-}
+[
+  "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/SsangYong2.jpg",
+  "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/SsangYong2.jpg",
+  "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/SsangYong2.jpg"
+]
