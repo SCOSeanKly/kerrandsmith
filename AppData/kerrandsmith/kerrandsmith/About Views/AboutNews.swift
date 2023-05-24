@@ -76,7 +76,7 @@ struct AboutNews: View {
 
     
     func fetchAboutNews() {
-        guard let url = URL(string: "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/aboutNews.json") else {
+        guard let url = URL(string: "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/aboutNews/aboutNews.json") else {
             return
         }
         

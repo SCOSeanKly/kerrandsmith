@@ -12,7 +12,7 @@ import SwiftUIMailView
 struct FeaturedScrollViewTrailers: View {
     @ObservedObject var viewModel = DataViewModel()
     
-    let urlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/featuredTrailers.json"
+    let urlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/featured/featuredTrailers.json"
     let baseURLString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Trailers/"
     
     var body: some View {

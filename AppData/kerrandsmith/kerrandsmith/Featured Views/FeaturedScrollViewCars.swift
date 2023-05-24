@@ -11,7 +11,7 @@ import SwiftUIMailView
 struct FeaturedScrollViewCars: View {
     @ObservedObject var viewModel = DataViewModel()
     
-    let urlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/featuredCars.json"
+    let urlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/featured/featuredCars.json"
     let baseURLString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/"
     
     var body: some View {
