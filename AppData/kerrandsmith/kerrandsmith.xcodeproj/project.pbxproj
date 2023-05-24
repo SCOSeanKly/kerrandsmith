@@ -193,6 +193,7 @@
 		3EF5F5F62A14C36A00363DF5 /* News Group */ = {
 			isa = PBXGroup;
 			children = (
+				3EF5F60F2A1516F200363DF5 /* AboutNews.swift */,
 				3E3029022A165DF500F25ECE /* newsInsertView.swift */,
 				3E79284D2A1BC3A200F41494 /* ServicesNews.swift */,
 				3E79284F2A1BCA9B00F41494 /* ServicesNews2.swift */,
@@ -250,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				3EEA47622A1264DF008AB5FA /* About.swift */,
-				3EF5F60F2A1516F200363DF5 /* AboutNews.swift */,
 				3EF5F6112A151B0D00363DF5 /* CallUsButton.swift */,
 			);
 			path = "About Views";
