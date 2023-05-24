@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E1142B02A1E3AC6008493CB /* ServicesNews3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1142AF2A1E3AC6008493CB /* ServicesNews3.swift */; };
+		3E3028F72A16203C00F25ECE /* RequiredFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3028F62A16203C00F25ECE /* RequiredFieldModifier.swift */; };
+		3E3028FB2A1632F200F25ECE /* MapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3028FA2A1632F200F25ECE /* MapImageView.swift */; };
+		3E3028FF2A1636DB00F25ECE /* HeaderImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3028FE2A1636DB00F25ECE /* HeaderImageSize.swift */; };
+		3E3029012A16541D00F25ECE /* HidePersistentOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3029002A16541D00F25ECE /* HidePersistentOverlay.swift */; };
+		3E3029032A165DF500F25ECE /* newsInsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3029022A165DF500F25ECE /* newsInsertView.swift */; };
+		3E3029052A166F7D00F25ECE /* LargeViewInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3029042A166F7D00F25ECE /* LargeViewInfoView.swift */; };
+		3E6A404A2A12912C0095A779 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A40492A12912C0095A779 /* AddressView.swift */; };
+		3E6A404E2A12D0CD0095A779 /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A404D2A12D0CD0095A779 /* FeaturedView.swift */; };
+		3E6A405A2A13999C0095A779 /* FeaturedScrollViewCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A40592A13999C0095A779 /* FeaturedScrollViewCars.swift */; };
+		3E79284A2A1BC03A00F41494 /* FeaturedNews2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7928492A1BC03A00F41494 /* FeaturedNews2.swift */; };
+		3E79284E2A1BC3A200F41494 /* ServicesNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79284D2A1BC3A200F41494 /* ServicesNews.swift */; };
+		3E7928502A1BCA9B00F41494 /* ServicesNews2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79284F2A1BCA9B00F41494 /* ServicesNews2.swift */; };
+		3EEA474F2A125FC8008AB5FA /* kerrandsmithApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA474E2A125FC8008AB5FA /* kerrandsmithApp.swift */; };
+		3EEA47512A125FC8008AB5FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47502A125FC8008AB5FA /* ContentView.swift */; };
+		3EEA47532A125FC8008AB5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EEA47522A125FC8008AB5FA /* Assets.xcassets */; };
+		3EEA47562A125FC8008AB5FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EEA47552A125FC8008AB5FA /* Preview Assets.xcassets */; };
+		3EEA475D2A1260DB008AB5FA /* ScrollingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA475C2A1260DB008AB5FA /* ScrollingHeader.swift */; };
+		3EEA475F2A126377008AB5FA /* ImageArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA475E2A126377008AB5FA /* ImageArrays.swift */; };
+		3EEA47612A126496008AB5FA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47602A126496008AB5FA /* MainView.swift */; };
+		3EEA47632A1264DF008AB5FA /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47622A1264DF008AB5FA /* About.swift */; };
+		3EEA47652A126708008AB5FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47642A126708008AB5FA /* HomeView.swift */; };
+		3EEA47672A126C22008AB5FA /* HeaderLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47662A126C22008AB5FA /* HeaderLogoView.swift */; };
+		3EEA476B2A127470008AB5FA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA476A2A127470008AB5FA /* MapView.swift */; };
+		3EEA476D2A12826B008AB5FA /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA476C2A12826B008AB5FA /* ServicesView.swift */; };
+		3EEA476F2A1282D7008AB5FA /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA476E2A1282D7008AB5FA /* RecoveryView.swift */; };
+		3EF553AC2A177E7D004F1D97 /* CopyrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553AB2A177E7D004F1D97 /* CopyrightView.swift */; };
+		3EF553B62A178E3A004F1D97 /* LargeViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553B52A178E3A004F1D97 /* LargeViewHeader.swift */; };
+		3EF553B82A1798FA004F1D97 /* LargeViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553B72A1798FA004F1D97 /* LargeViewButton.swift */; };
+		3EF553DA2A17B7EA004F1D97 /* ScrollingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553D92A17B7EA004F1D97 /* ScrollingHeaderView.swift */; };
+		3EF554022A18B96E004F1D97 /* SwiftUIMailView in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF554012A18B96E004F1D97 /* SwiftUIMailView */; };
+		3EF554042A18B97E004F1D97 /* SendEmailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF554032A18B97E004F1D97 /* SendEmailTest.swift */; };
+		3EF5F5EC2A14162F00363DF5 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5EB2A14162F00363DF5 /* DataViewModel.swift */; };
+		3EF5F5EE2A1418EE00363DF5 /* FeaturedScrollViewVans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5ED2A1418EE00363DF5 /* FeaturedScrollViewVans.swift */; };
+		3EF5F5F02A14194C00363DF5 /* FeaturedScrollViewTrailers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5EF2A14194C00363DF5 /* FeaturedScrollViewTrailers.swift */; };
+		3EF5F5F22A141A1900363DF5 /* FeaturedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5F12A141A1900363DF5 /* FeaturedHeader.swift */; };
+		3EF5F5F52A14BFF700363DF5 /* FeaturedNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5F42A14BFF700363DF5 /* FeaturedNews.swift */; };
+		3EF5F5F82A14C5E200363DF5 /* RecoveryLogosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5F72A14C5E200363DF5 /* RecoveryLogosView.swift */; };
+		3EF5F5FB2A14CE8900363DF5 /* RecoveryNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5FA2A14CE8900363DF5 /* RecoveryNews.swift */; };
+		3EF5F5FD2A14D68500363DF5 /* RecoveryNews2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5FC2A14D68500363DF5 /* RecoveryNews2.swift */; };
+		3EF5F5FF2A14DC9E00363DF5 /* PhonetRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5FE2A14DC9E00363DF5 /* PhonetRecoveryView.swift */; };
+		3EF5F6012A14E28D00363DF5 /* TextArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F6002A14E28D00363DF5 /* TextArrays.swift */; };
+		3EF5F6032A14E3C500363DF5 /* RecoveryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F6022A14E3C500363DF5 /* RecoveryTextView.swift */; };
+		3EF5F6072A14EA6400363DF5 /* ServicesVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F6062A14EA6400363DF5 /* ServicesVerticalView.swift */; };
+		3EF5F60B2A1503D900363DF5 /* BookingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F60A2A1503D900363DF5 /* BookingForm.swift */; };
+		3EF5F6102A1516F200363DF5 /* AboutNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F60F2A1516F200363DF5 /* AboutNews.swift */; };
+		3EF5F6122A151B0D00363DF5 /* CallUsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F6112A151B0D00363DF5 /* CallUsButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E1142AF2A1E3AC6008493CB /* ServicesNews3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesNews3.swift; sourceTree = "<group>"; };
+		3E3028F62A16203C00F25ECE /* RequiredFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldModifier.swift; sourceTree = "<group>"; };
+		3E3028FA2A1632F200F25ECE /* MapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageView.swift; sourceTree = "<group>"; };
+		3E3028FE2A1636DB00F25ECE /* HeaderImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageSize.swift; sourceTree = "<group>"; };
+		3E3029002A16541D00F25ECE /* HidePersistentOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidePersistentOverlay.swift; sourceTree = "<group>"; };
+		3E3029022A165DF500F25ECE /* newsInsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsInsertView.swift; sourceTree = "<group>"; };
+		3E3029042A166F7D00F25ECE /* LargeViewInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewInfoView.swift; sourceTree = "<group>"; };
+		3E6A40492A12912C0095A779 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		3E6A404D2A12D0CD0095A779 /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
+		3E6A40592A13999C0095A779 /* FeaturedScrollViewCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedScrollViewCars.swift; sourceTree = "<group>"; };
+		3E7928492A1BC03A00F41494 /* FeaturedNews2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedNews2.swift; sourceTree = "<group>"; };
+		3E79284D2A1BC3A200F41494 /* ServicesNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesNews.swift; sourceTree = "<group>"; };
+		3E79284F2A1BCA9B00F41494 /* ServicesNews2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesNews2.swift; sourceTree = "<group>"; };
+		3EEA474B2A125FC8008AB5FA /* kerrandsmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kerrandsmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EEA474E2A125FC8008AB5FA /* kerrandsmithApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kerrandsmithApp.swift; sourceTree = "<group>"; };
+		3EEA47502A125FC8008AB5FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3EEA47522A125FC8008AB5FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EEA47552A125FC8008AB5FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3EEA475C2A1260DB008AB5FA /* ScrollingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHeader.swift; sourceTree = "<group>"; };
+		3EEA475E2A126377008AB5FA /* ImageArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArrays.swift; sourceTree = "<group>"; };
+		3EEA47602A126496008AB5FA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3EEA47622A1264DF008AB5FA /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		3EEA47642A126708008AB5FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3EEA47662A126C22008AB5FA /* HeaderLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLogoView.swift; sourceTree = "<group>"; };
+		3EEA476A2A127470008AB5FA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		3EEA476C2A12826B008AB5FA /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
+		3EEA476E2A1282D7008AB5FA /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
+		3EF553AB2A177E7D004F1D97 /* CopyrightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightView.swift; sourceTree = "<group>"; };
+		3EF553B52A178E3A004F1D97 /* LargeViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewHeader.swift; sourceTree = "<group>"; };
+		3EF553B72A1798FA004F1D97 /* LargeViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewButton.swift; sourceTree = "<group>"; };
+		3EF553D92A17B7EA004F1D97 /* ScrollingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHeaderView.swift; sourceTree = "<group>"; };
+		3EF554032A18B97E004F1D97 /* SendEmailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailTest.swift; sourceTree = "<group>"; };
+		3EF5F5EB2A14162F00363DF5 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		3EF5F5ED2A1418EE00363DF5 /* FeaturedScrollViewVans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedScrollViewVans.swift; sourceTree = "<group>"; };
+		3EF5F5EF2A14194C00363DF5 /* FeaturedScrollViewTrailers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedScrollViewTrailers.swift; sourceTree = "<group>"; };
+		3EF5F5F12A141A1900363DF5 /* FeaturedHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedHeader.swift; sourceTree = "<group>"; };
+		3EF5F5F42A14BFF700363DF5 /* FeaturedNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedNews.swift; sourceTree = "<group>"; };
+		3EF5F5F72A14C5E200363DF5 /* RecoveryLogosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryLogosView.swift; sourceTree = "<group>"; };
+		3EF5F5FA2A14CE8900363DF5 /* RecoveryNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryNews.swift; sourceTree = "<group>"; };
+		3EF5F5FC2A14D68500363DF5 /* RecoveryNews2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryNews2.swift; sourceTree = "<group>"; };
+		3EF5F5FE2A14DC9E00363DF5 /* PhonetRecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonetRecoveryView.swift; sourceTree = "<group>"; };
+		3EF5F6002A14E28D00363DF5 /* TextArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArrays.swift; sourceTree = "<group>"; };
+		3EF5F6022A14E3C500363DF5 /* RecoveryTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryTextView.swift; sourceTree = "<group>"; };
+		3EF5F6062A14EA6400363DF5 /* ServicesVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesVerticalView.swift; sourceTree = "<group>"; };
+		3EF5F60A2A1503D900363DF5 /* BookingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingForm.swift; sourceTree = "<group>"; };
+		3EF5F60F2A1516F200363DF5 /* AboutNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutNews.swift; sourceTree = "<group>"; };
+		3EF5F6112A151B0D00363DF5 /* CallUsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUsButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EEA47482A125FC8008AB5FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF554022A18B96E004F1D97 /* SwiftUIMailView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E3029062A1670FC00F25ECE /* Header Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EF553D92A17B7EA004F1D97 /* ScrollingHeaderView.swift */,
+				3EEA47642A126708008AB5FA /* HomeView.swift */,
+				3EEA475C2A1260DB008AB5FA /* ScrollingHeader.swift */,
+				3EEA47662A126C22008AB5FA /* HeaderLogoView.swift */,
+			);
+			path = "Header Views";
+			sourceTree = "<group>";
+		};
+		3EEA47422A125FC8008AB5FA = {
+			isa = PBXGroup;
+			children = (
+				3EEA47522A125FC8008AB5FA /* Assets.xcassets */,
+				3EEA474D2A125FC8008AB5FA /* kerrandsmith */,
+				3EEA474C2A125FC8008AB5FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EEA474C2A125FC8008AB5FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EEA474B2A125FC8008AB5FA /* kerrandsmith.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EEA474D2A125FC8008AB5FA /* kerrandsmith */ = {
+			isa = PBXGroup;
+			children = (
+				3E3029002A16541D00F25ECE /* HidePersistentOverlay.swift */,
+				3E3028FE2A1636DB00F25ECE /* HeaderImageSize.swift */,
+				3EEA47502A125FC8008AB5FA /* ContentView.swift */,
+				3EEA474E2A125FC8008AB5FA /* kerrandsmithApp.swift */,
+				3EEA47602A126496008AB5FA /* MainView.swift */,
+				3EF5F6052A14E4BB00363DF5 /* Arrays */,
+				3EF5F6132A151B4E00363DF5 /* About Views */,
+				3E3029062A1670FC00F25ECE /* Header Views */,
+				3EF5F60C2A15094400363DF5 /* Services View */,
+				3EF5F6042A14E4AA00363DF5 /* Contact Views */,
+				3EF5F5F92A14C72500363DF5 /* Recovery Views */,
+				3EF5F5F32A14247B00363DF5 /* Featured Views */,
+				3EF5F5F62A14C36A00363DF5 /* News Group */,
+				3EEA47542A125FC8008AB5FA /* Preview Content */,
+			);
+			path = kerrandsmith;
+			sourceTree = "<group>";
+		};
+		3EEA47542A125FC8008AB5FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3EEA47552A125FC8008AB5FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3EF5F5F32A14247B00363DF5 /* Featured Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EF553AB2A177E7D004F1D97 /* CopyrightView.swift */,
+				3EF5F5EB2A14162F00363DF5 /* DataViewModel.swift */,
+				3E6A404D2A12D0CD0095A779 /* FeaturedView.swift */,
+				3EF5F5F12A141A1900363DF5 /* FeaturedHeader.swift */,
+				3E6A40592A13999C0095A779 /* FeaturedScrollViewCars.swift */,
+				3EF5F5ED2A1418EE00363DF5 /* FeaturedScrollViewVans.swift */,
+				3EF5F5EF2A14194C00363DF5 /* FeaturedScrollViewTrailers.swift */,
+				3E3029042A166F7D00F25ECE /* LargeViewInfoView.swift */,
+				3EF553B52A178E3A004F1D97 /* LargeViewHeader.swift */,
+				3EF553B72A1798FA004F1D97 /* LargeViewButton.swift */,
+			);
+			path = "Featured Views";
+			sourceTree = "<group>";
+		};
+		3EF5F5F62A14C36A00363DF5 /* News Group */ = {
+			isa = PBXGroup;
+			children = (
+				3E3029022A165DF500F25ECE /* newsInsertView.swift */,
+				3E79284D2A1BC3A200F41494 /* ServicesNews.swift */,
+				3E79284F2A1BCA9B00F41494 /* ServicesNews2.swift */,
+				3E1142AF2A1E3AC6008493CB /* ServicesNews3.swift */,
+				3EF5F5F42A14BFF700363DF5 /* FeaturedNews.swift */,
+				3E7928492A1BC03A00F41494 /* FeaturedNews2.swift */,
+				3EF5F5FA2A14CE8900363DF5 /* RecoveryNews.swift */,
+				3EF5F5FC2A14D68500363DF5 /* RecoveryNews2.swift */,
+			);
+			path = "News Group";
+			sourceTree = "<group>";
+		};
+		3EF5F5F92A14C72500363DF5 /* Recovery Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EEA476E2A1282D7008AB5FA /* RecoveryView.swift */,
+				3EF5F5F72A14C5E200363DF5 /* RecoveryLogosView.swift */,
+				3EF5F6022A14E3C500363DF5 /* RecoveryTextView.swift */,
+				3EF5F5FE2A14DC9E00363DF5 /* PhonetRecoveryView.swift */,
+			);
+			path = "Recovery Views";
+			sourceTree = "<group>";
+		};
+		3EF5F6042A14E4AA00363DF5 /* Contact Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E3028F62A16203C00F25ECE /* RequiredFieldModifier.swift */,
+				3EEA476A2A127470008AB5FA /* MapView.swift */,
+				3E3028FA2A1632F200F25ECE /* MapImageView.swift */,
+				3E6A40492A12912C0095A779 /* AddressView.swift */,
+			);
+			path = "Contact Views";
+			sourceTree = "<group>";
+		};
+		3EF5F6052A14E4BB00363DF5 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				3EEA475E2A126377008AB5FA /* ImageArrays.swift */,
+				3EF5F6002A14E28D00363DF5 /* TextArrays.swift */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		3EF5F60C2A15094400363DF5 /* Services View */ = {
+			isa = PBXGroup;
+			children = (
+				3EF554032A18B97E004F1D97 /* SendEmailTest.swift */,
+				3EEA476C2A12826B008AB5FA /* ServicesView.swift */,
+				3EF5F6062A14EA6400363DF5 /* ServicesVerticalView.swift */,
+				3EF5F60A2A1503D900363DF5 /* BookingForm.swift */,
+			);
+			path = "Services View";
+			sourceTree = "<group>";
+		};
+		3EF5F6132A151B4E00363DF5 /* About Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EEA47622A1264DF008AB5FA /* About.swift */,
+				3EF5F60F2A1516F200363DF5 /* AboutNews.swift */,
+				3EF5F6112A151B0D00363DF5 /* CallUsButton.swift */,
+			);
+			path = "About Views";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EEA474A2A125FC8008AB5FA /* kerrandsmith */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EEA47592A125FC8008AB5FA /* Build configuration list for PBXNativeTarget "kerrandsmith" */;
+			buildPhases = (
+				3EEA47472A125FC8008AB5FA /* Sources */,
+				3EEA47482A125FC8008AB5FA /* Frameworks */,
+				3EEA47492A125FC8008AB5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kerrandsmith;
+			packageProductDependencies = (
+				3EF554012A18B96E004F1D97 /* SwiftUIMailView */,
+			);
+			productName = kerrandsmith;
+			productReference = 3EEA474B2A125FC8008AB5FA /* kerrandsmith.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EEA47432A125FC8008AB5FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3EEA474A2A125FC8008AB5FA = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 3EEA47462A125FC8008AB5FA /* Build configuration list for PBXProject "kerrandsmith" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EEA47422A125FC8008AB5FA;
+			packageReferences = (
+				3EF554002A18B96E004F1D97 /* XCRemoteSwiftPackageReference "swiftui-mail-view" */,
+			);
+			productRefGroup = 3EEA474C2A125FC8008AB5FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EEA474A2A125FC8008AB5FA /* kerrandsmith */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EEA47492A125FC8008AB5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EEA47562A125FC8008AB5FA /* Preview Assets.xcassets in Resources */,
+				3EEA47532A125FC8008AB5FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EEA47472A125FC8008AB5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EF5F5F52A14BFF700363DF5 /* FeaturedNews.swift in Sources */,
+				3EF5F5FB2A14CE8900363DF5 /* RecoveryNews.swift in Sources */,
+				3E6A404A2A12912C0095A779 /* AddressView.swift in Sources */,
+				3EEA47512A125FC8008AB5FA /* ContentView.swift in Sources */,
+				3EEA47652A126708008AB5FA /* HomeView.swift in Sources */,
+				3EF5F60B2A1503D900363DF5 /* BookingForm.swift in Sources */,
+				3E1142B02A1E3AC6008493CB /* ServicesNews3.swift in Sources */,
+				3EEA47632A1264DF008AB5FA /* About.swift in Sources */,
+				3E3029052A166F7D00F25ECE /* LargeViewInfoView.swift in Sources */,
+				3E3029032A165DF500F25ECE /* newsInsertView.swift in Sources */,
+				3E6A405A2A13999C0095A779 /* FeaturedScrollViewCars.swift in Sources */,
+				3EF5F5FF2A14DC9E00363DF5 /* PhonetRecoveryView.swift in Sources */,
+				3EF5F5F22A141A1900363DF5 /* FeaturedHeader.swift in Sources */,
+				3E79284E2A1BC3A200F41494 /* ServicesNews.swift in Sources */,
+				3EEA476F2A1282D7008AB5FA /* RecoveryView.swift in Sources */,
+				3EF553B62A178E3A004F1D97 /* LargeViewHeader.swift in Sources */,
+				3EF554042A18B97E004F1D97 /* SendEmailTest.swift in Sources */,
+				3EEA475F2A126377008AB5FA /* ImageArrays.swift in Sources */,
+				3EF5F5EE2A1418EE00363DF5 /* FeaturedScrollViewVans.swift in Sources */,
+				3E79284A2A1BC03A00F41494 /* FeaturedNews2.swift in Sources */,
+				3EF5F5EC2A14162F00363DF5 /* DataViewModel.swift in Sources */,
+				3EF553DA2A17B7EA004F1D97 /* ScrollingHeaderView.swift in Sources */,
+				3EEA476D2A12826B008AB5FA /* ServicesView.swift in Sources */,
+				3EEA47672A126C22008AB5FA /* HeaderLogoView.swift in Sources */,
+				3EF5F6122A151B0D00363DF5 /* CallUsButton.swift in Sources */,
+				3EF5F5F02A14194C00363DF5 /* FeaturedScrollViewTrailers.swift in Sources */,
+				3EF5F6012A14E28D00363DF5 /* TextArrays.swift in Sources */,
+				3E3029012A16541D00F25ECE /* HidePersistentOverlay.swift in Sources */,
+				3E3028FF2A1636DB00F25ECE /* HeaderImageSize.swift in Sources */,
+				3E3028F72A16203C00F25ECE /* RequiredFieldModifier.swift in Sources */,
+				3E7928502A1BCA9B00F41494 /* ServicesNews2.swift in Sources */,
+				3EF553AC2A177E7D004F1D97 /* CopyrightView.swift in Sources */,
+				3EF5F6102A1516F200363DF5 /* AboutNews.swift in Sources */,
+				3EF5F6032A14E3C500363DF5 /* RecoveryTextView.swift in Sources */,
+				3EF5F5F82A14C5E200363DF5 /* RecoveryLogosView.swift in Sources */,
+				3E6A404E2A12D0CD0095A779 /* FeaturedView.swift in Sources */,
+				3EF5F6072A14EA6400363DF5 /* ServicesVerticalView.swift in Sources */,
+				3E3028FB2A1632F200F25ECE /* MapImageView.swift in Sources */,
+				3EEA475D2A1260DB008AB5FA /* ScrollingHeader.swift in Sources */,
+				3EEA476B2A127470008AB5FA /* MapView.swift in Sources */,
+				3EF5F5FD2A14D68500363DF5 /* RecoveryNews2.swift in Sources */,
+				3EEA47612A126496008AB5FA /* MainView.swift in Sources */,
+				3EF553B82A1798FA004F1D97 /* LargeViewButton.swift in Sources */,
+				3EEA474F2A125FC8008AB5FA /* kerrandsmithApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3EEA47572A125FC8008AB5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EEA47582A125FC8008AB5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EEA475A2A125FC8008AB5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.23;
+				DEVELOPMENT_ASSET_PATHS = "\"kerrandsmith/Preview Content\"";
+				DEVELOPMENT_TEAM = V53QHKZTNF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Saved to Photos Album";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.show.kerrandsmith;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EEA475B2A125FC8008AB5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.23;
+				DEVELOPMENT_ASSET_PATHS = "\"kerrandsmith/Preview Content\"";
+				DEVELOPMENT_TEAM = V53QHKZTNF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Saved to Photos Album";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.show.kerrandsmith;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EEA47462A125FC8008AB5FA /* Build configuration list for PBXProject "kerrandsmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EEA47572A125FC8008AB5FA /* Debug */,
+				3EEA47582A125FC8008AB5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EEA47592A125FC8008AB5FA /* Build configuration list for PBXNativeTarget "kerrandsmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EEA475A2A125FC8008AB5FA /* Debug */,
+				3EEA475B2A125FC8008AB5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3EF554002A18B96E004F1D97 /* XCRemoteSwiftPackageReference "swiftui-mail-view" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-mail-view.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3EF554012A18B96E004F1D97 /* SwiftUIMailView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EF554002A18B96E004F1D97 /* XCRemoteSwiftPackageReference "swiftui-mail-view" */;
+			productName = SwiftUIMailView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3EEA47432A125FC8008AB5FA /* Project object */;
+}
