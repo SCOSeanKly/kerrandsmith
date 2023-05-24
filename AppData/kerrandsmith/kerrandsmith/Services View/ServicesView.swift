@@ -72,6 +72,10 @@ struct ServicesView: View {
                 
                 ServicesVerticalView(imageName: "sales", imageWidth: imageHWidth, imageHeight: imageHHeight, titleText: "Sales", subTitleText: servicesBlock[3], lineLimit: 2, showBookingFormButton: true, bookingFormButtonText: "Contact our Sales Team", showBookingForm: $showBookingForm, showMore: true)
                 
+                ServicesNews3()
+                    .padding(.horizontal, 10)
+                    .padding(.top)
+                
                 
                 HStack (alignment: .top) {
                     
