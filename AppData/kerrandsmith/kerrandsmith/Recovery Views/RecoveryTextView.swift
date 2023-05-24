@@ -67,7 +67,7 @@ struct RecoveryTextView: View {
                 Spacer()
             }
   
-            CallUsButton(phoneNumber: "01290 428800", buttonText: "Call Recovery")
+            CallUsButton(phoneNumber: "01290428800", buttonText: "Call Recovery")
                 .padding(.bottom, 50)
             
         }
