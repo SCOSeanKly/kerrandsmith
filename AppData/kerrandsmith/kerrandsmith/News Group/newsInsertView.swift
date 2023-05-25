@@ -52,8 +52,7 @@ struct newsInsertView: View {
                 
                 if showCallUs {
                     HStack {
-                        Spacer()
-                        
+                       
                         Button(action: {
                             if let url = URL(string: "tel:\(01290422440)") {
                                 UIApplication.shared.open(url)
@@ -63,13 +62,17 @@ struct newsInsertView: View {
                                 .font(.caption)
                                 .foregroundColor(linkColour)
                                 .fontWeight(.semibold)
+//                                .padding(.all, 5)
+//                                .background(.regularMaterial)
+//                                .clipShape(RoundedRectangle(cornerRadius: 5))
                                 .padding(.top, 5)
                         }
+                        
+                        Spacer()
                     }
                     .padding(.trailing)
                 } else if showWebLink {
                     HStack {
-                        Spacer()
                         
                         Button(action: {
                             openWebAddress(webLink)
@@ -79,8 +82,12 @@ struct newsInsertView: View {
                                 .font(.caption)
                                 .foregroundColor(linkColour)
                                 .fontWeight(.semibold)
+//                                .padding(.all, 5)
+//                                .background(.regularMaterial)
+//                                .clipShape(RoundedRectangle(cornerRadius: 5))
                                 .padding(.top, 5)
                         }
+                        Spacer()
                     }
                     .padding(.trailing)
                 }

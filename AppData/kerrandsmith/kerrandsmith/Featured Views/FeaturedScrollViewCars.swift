@@ -40,13 +40,11 @@ struct URLImageView: View {
     let image: ImageModel
     @State private var showContactFormView: Bool = false
     @State private var showLargeImage: Bool = false
-    let thumbWidth: CGFloat = 4.4
-    @State private var rectangleColor: Color = .blue
-    
     @State private var showMailView = false
     @State private var mailData: ComposeMailData
-    
     @State private var showingAlert = false
+    let imageWidth = UIScreen.main.bounds.width * 0.65
+    let imageHeight = UIScreen.main.bounds.width * 0.45
     
     init(image: ImageModel) {
         self.image = image
@@ -74,7 +72,7 @@ struct URLImageView: View {
                         Button {
                             showLargeImage = true
                         }label: {
-                            LargeViewButton(systemImage: "camera.fill")
+                            LargeImageViewButton(systemImage: "camera.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
                         }
                         
                     }
@@ -84,7 +82,7 @@ struct URLImageView: View {
                     EmptyView()
                 }
             }
-            .frame(width: 280, height: 200)
+            .frame(width: imageWidth, height: imageHeight)
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(Color.gray, lineWidth: 0.5)
@@ -97,39 +95,42 @@ struct URLImageView: View {
                     .padding(.top, 8)
                 
                 ScrollView {
-                    LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle)
-                    
-                    Button {
-                        saveImageToPhotoAlbum(image.image1)
-                        showingAlert.toggle()
-                    } label: {
-                        LargeImageView(imageURL: image.image1)
-                    }
-                    
-                    Button {
-                        saveImageToPhotoAlbum(image.image2)
-                        showingAlert.toggle()
-                    } label: {
-                        LargeImageView(imageURL: image.image2)
-                    }
-                   
-                    LargeViewInfoView()
-                    
-                    Button {
-                        saveImageToPhotoAlbum(image.image3)
-                        showingAlert.toggle()
-                    } label: {
-                        LargeImageView(imageURL: image.image3)
-                    }
+                    VStack (alignment: .center) {
+                        LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle, priceString: image.price)
                 
-                    Button {
-                        saveImageToPhotoAlbum(image.image4)
-                        showingAlert.toggle()
-                    } label: {
-                        LargeImageView(imageURL: image.image4)
+                            Button {
+                                saveImageToPhotoAlbum(image.image1)
+                                showingAlert.toggle()
+                            } label: {
+                                LargeImageView(imageURL: image.image1)
+                            }
+                        
+                        
+                        Button {
+                            saveImageToPhotoAlbum(image.image2)
+                            showingAlert.toggle()
+                        } label: {
+                            LargeImageView(imageURL: image.image2)
+                        }
+                        
+                        LargeViewInfoView()
+                        
+                        Button {
+                            saveImageToPhotoAlbum(image.image3)
+                            showingAlert.toggle()
+                        } label: {
+                            LargeImageView(imageURL: image.image3)
+                        }
+                        
+                        Button {
+                            saveImageToPhotoAlbum(image.image4)
+                            showingAlert.toggle()
+                        } label: {
+                            LargeImageView(imageURL: image.image4)
+                        }
+                        
+                        CopyrightView()
                     }
-                    
-                    CopyrightView()
                 }
                 .alert("Saved to Photos Album", isPresented: $showingAlert) {
                             Button("OK", role: .cancel) { }
@@ -137,81 +138,8 @@ struct URLImageView: View {
                 .prefersPersistentSystemOverlaysHidden()
             }
             
-            VStack {
-                HStack {
-                    Text(image.title)
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                    Spacer()
-                }
-                HStack {
-                    Text(image.subtitle)
-                        .font(.footnote)
-                        .opacity(0.8)
-                        .lineLimit(1)
-                    Spacer()
-                }
-                HStack {
-                  
-                    Text(image.price)
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .opacity(0.8)
-                        .lineLimit(1)
-                        .padding(.top, 5)
-                    Spacer()
-                }
-                
-                if !MailView.canSendMail {
-                    HStack {
-                        Button(action: {
-                            if !MailView.canSendMail {
-                                if let url = URL(string: "tel:\(01290422440)") {
-                                    UIApplication.shared.open(url)
-                                }
-                            } else {
-                                showContactFormView = true
-                            }
-                        }) {
-                            Text(!MailView.canSendMail ? "\(Image(systemName: "phone")) Call Us" : "\(Image(systemName: "envelope")) Enquire")
-                                .font(.caption)
-                                .foregroundColor(!MailView.canSendMail ? .green : .blue)
-                                .fontWeight(.semibold)
-                                .padding(.top, 1)
-                        }
-                        .sheet(isPresented: $showContactFormView) {
-                            MailView(data: $mailData) { result in
-                                print(result)
-                            }
-                        }
-                        
-                        Spacer()
-                    }
-                    .disabled(!MailView.canSendMail)
-                } else {
-                    HStack {
-                        Button(action: {
-                            showContactFormView = true
-                        }) {
-                            Text("Enquire Now")
-                                .font(.caption)
-                                .foregroundColor(.blue)
-                                .fontWeight(.semibold)
-                                .padding(.top, 1)
-                        }
-                        .sheet(isPresented: $showContactFormView) {
-                            MailView(data: $mailData) { result in
-                                print(result)
-                            }
-                        }
-                        
-                        Spacer()
-                    }
-                }
-            }
-            .padding()
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+            featuredInfoText(image: image)
+            
         }
     }
     
@@ -245,45 +173,8 @@ struct URLImageView: View {
 
         task.resume()
     }
-
 }
 
-struct LargeImageView: View {
-    let imageURL: String
-    
-    
-    var body: some View {
-        AsyncImage(url: URL(string: imageURL)) { phase in
-            switch phase {
-            case .empty:
-                ProgressView()
-            case .success(let loadedImage):
-                ZStack {
-                    loadedImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipped()
-                        .cornerRadius(5)
-                    
-                    LargeViewButton(systemImage: "square.and.arrow.down.fill")
-                        .disabled(true)
-                }
-            case .failure:
-                
-                VStack {
-                    Image(systemName: "exclamationmark.triangle")
-                        .foregroundColor(.red)
-                    Text("Image Coming Soon")
-                        .font(.footnote)
-                }
-            @unknown default:
-                EmptyView()
-            }
-        }
-        .padding()
-        Spacer()
-    }
-}
 
 
 

@@ -41,11 +41,10 @@ struct URLImageViewTrailers: View {
     let image: ImageModel
     @State private var showContactFormView: Bool = false
     @State private var showLargeImage: Bool = false
-    let thumbWidth: CGFloat = 4.4
-    @State private var rectangleColor: Color = .blue
-    
     @State private var showMailView = false
     @State private var mailData: ComposeMailData
+    let imageWidth = UIScreen.main.bounds.width * 0.65
+    let imageHeight = UIScreen.main.bounds.width * 0.45
     
     init(image: ImageModel) {
         self.image = image
@@ -65,26 +64,23 @@ struct URLImageViewTrailers: View {
                 case .empty:
                     ProgressView()
                 case .success(let loadedImage):
-                    
-                    ZStack {
                         loadedImage
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                        
-                        Button {
-                            showLargeImage = true
-                        }label: {
-                            LargeViewButton(systemImage: "camera.fill")
-                        }
-                        
-                    }
+                            .overlay {
+                                Button {
+                                    showLargeImage = true
+                                }label: {
+                                    LargeImageViewButton(systemImage: "camera.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
+                                }
+                            }
                 case .failure:
                     Image(systemName: "exclamationmark.triangle")
                 @unknown default:
                     EmptyView()
                 }
             }
-            .frame(width: 280, height: 200)
+            .frame(width: imageWidth, height: imageHeight)
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(Color.gray, lineWidth: 0.5)
@@ -96,7 +92,7 @@ struct URLImageViewTrailers: View {
                     .foregroundColor(Color.gray.opacity(0.5))
                     .padding(.top, 8)
                 ScrollView {
-                    LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle)
+                    LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle, priceString: image.price)
                     LargeImageView(imageURL: image.image1)
                     LargeImageView(imageURL: image.image2)
                     LargeViewInfoView()
@@ -107,84 +103,8 @@ struct URLImageViewTrailers: View {
                 .prefersPersistentSystemOverlaysHidden()
             }
             
-            VStack {
-                HStack {
-                    Text(image.title)
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                    Spacer()
-                }
-                HStack {
-                    Text(image.subtitle)
-                        .font(.footnote)
-                        .opacity(0.8)
-                        .lineLimit(1)
-                    Spacer()
-                }
-                HStack {
-                  
-                    Text(image.price)
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .opacity(0.8)
-                        .lineLimit(1)
-                        .padding(.top, 5)
-                    Spacer()
-                }
-                
-                if !MailView.canSendMail {
-                    HStack {
-                        Button(action: {
-                            if !MailView.canSendMail {
-                                if let url = URL(string: "tel:\(01290422440)") {
-                                    UIApplication.shared.open(url)
-                                }
-                            } else {
-                                
-                                showContactFormView = true
-                            }
-                        }) {
-                            Text(!MailView.canSendMail ? "\(Image(systemName: "phone")) Call Us" : "\(Image(systemName: "envelope")) Enquire")
-                                .font(.caption)
-                                .foregroundColor(!MailView.canSendMail ? .green : .blue)
-                                .fontWeight(.semibold)
-                                .padding(.top, 1)
-                        }
-                        .sheet(isPresented: $showContactFormView) {
-                            //ContactMapView()
-                            MailView(data: $mailData) { result in
-                                print(result)}
-                        }
-                        
-                        Spacer()
-                    }
-                    .disabled(!MailView.canSendMail)
-                    
-                } else {
-                    HStack {
-                        Button(action: {
-                            showContactFormView = true
-                        }) {
-                            Text("Enquire Now")
-                                .font(.caption)
-                                .foregroundColor(.blue)
-                                .fontWeight(.semibold)
-                                .padding(.top, 1)
-                        }
-                        .sheet(isPresented: $showContactFormView) {
-                            //ContactMapView()
-                            MailView(data: $mailData) { result in
-                                print(result)}
-                            
-                        }
-                        
-                        Spacer()
-                    }
-                }
-            }
-            .padding()
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+            featuredInfoText(image: image)
+            
         }
     }
 }

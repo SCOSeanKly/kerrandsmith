@@ -48,7 +48,7 @@ struct ServicesView: View {
             }
             ScrollView (showsIndicators: false){
                 
-                ServicesVerticalView(imageName: "workshop", imageWidth: imageHWidth, imageHeight: imageLargeHeight, titleText: "Service", subTitleText: servicesBlock[0], lineLimit: 6, showBookingFormButton: true, bookingFormButtonText: "Contact our Service Department", showBookingForm: $showBookingForm, showMore: true)
+                ServicesVerticalView(imageName: "workshop", imageWidth: imageHWidth, imageHeight: imageLargeHeight, titleText: "Service", subTitleText: servicesBlock[0], lineLimit: 2, showBookingFormButton: true, bookingFormButtonText: "Contact our Service Department", showBookingForm: $showBookingForm, showMore: true)
                 
                 ServicesNews()
                    .padding(.top)

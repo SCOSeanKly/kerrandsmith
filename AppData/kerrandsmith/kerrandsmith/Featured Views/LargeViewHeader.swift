@@ -14,6 +14,8 @@ struct LargeViewHeader: View {
     
     let titleString: String
     let subtitleString: String
+    let priceString: String
+    let frameWidth = UIScreen.main.bounds.width * 0.99
     
     var body: some View {
         ZStack {
@@ -21,25 +23,27 @@ struct LargeViewHeader: View {
             VStack {
                 HStack {
                     Text(titleString)
-                        .font(.headline)
+                        .font(.subheadline)
                         .fontWeight(.semibold)
-                        .lineLimit(1)
-                    
                     Spacer()
                 }
-                .padding(.horizontal)
-                .padding(.bottom, 5)
-                
                 HStack {
                     Text(subtitleString)
                         .font(.footnote)
-                        .lineLimit(10)
-                        .multilineTextAlignment(.leading)
                         .opacity(0.8)
-                    
+                        .lineLimit(1)
                     Spacer()
                 }
-                .padding(.horizontal)
+                HStack {
+                  
+                    Text(priceString)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .opacity(0.8)
+                        .lineLimit(1)
+                        .padding(.top, 5)
+                    Spacer()
+                }
                 
                 HStack {
                     Spacer()
@@ -66,6 +70,7 @@ struct LargeViewHeader: View {
             .padding(.top)
             
         }
+        .frame(width: frameWidth)
         .onAppear {
             generateRandomColor()
         }

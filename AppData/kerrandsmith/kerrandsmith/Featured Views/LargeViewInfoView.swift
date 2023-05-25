@@ -62,7 +62,7 @@ struct LargeViewInfoView: View {
             .background(rectangleColor.opacity(0.2))
             .clipShape(RoundedRectangle(cornerRadius: 5))
             .padding(.horizontal, 5)
-            .padding(.top)
+          //  .padding(.top)
             
         }
         .onAppear {

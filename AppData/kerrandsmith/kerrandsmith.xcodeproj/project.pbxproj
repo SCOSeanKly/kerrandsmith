@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E1142B02A1E3AC6008493CB /* ServicesNews3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1142AF2A1E3AC6008493CB /* ServicesNews3.swift */; };
+		3E1C8F8B2A1E540900962CDD /* featuredInfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C8F8A2A1E540900962CDD /* featuredInfoText.swift */; };
+		3E1C8F8D2A1E5ADC00962CDD /* LargeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C8F8C2A1E5ADC00962CDD /* LargeImageView.swift */; };
 		3E3028F72A16203C00F25ECE /* RequiredFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3028F62A16203C00F25ECE /* RequiredFieldModifier.swift */; };
 		3E3028FB2A1632F200F25ECE /* MapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3028FA2A1632F200F25ECE /* MapImageView.swift */; };
 		3E3028FF2A1636DB00F25ECE /* HeaderImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3028FE2A1636DB00F25ECE /* HeaderImageSize.swift */; };
@@ -35,7 +37,6 @@
 		3EEA476F2A1282D7008AB5FA /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA476E2A1282D7008AB5FA /* RecoveryView.swift */; };
 		3EF553AC2A177E7D004F1D97 /* CopyrightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553AB2A177E7D004F1D97 /* CopyrightView.swift */; };
 		3EF553B62A178E3A004F1D97 /* LargeViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553B52A178E3A004F1D97 /* LargeViewHeader.swift */; };
-		3EF553B82A1798FA004F1D97 /* LargeViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553B72A1798FA004F1D97 /* LargeViewButton.swift */; };
 		3EF553DA2A17B7EA004F1D97 /* ScrollingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF553D92A17B7EA004F1D97 /* ScrollingHeaderView.swift */; };
 		3EF554022A18B96E004F1D97 /* SwiftUIMailView in Frameworks */ = {isa = PBXBuildFile; productRef = 3EF554012A18B96E004F1D97 /* SwiftUIMailView */; };
 		3EF5F5EC2A14162F00363DF5 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5F5EB2A14162F00363DF5 /* DataViewModel.swift */; };
@@ -57,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		3E1142AF2A1E3AC6008493CB /* ServicesNews3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesNews3.swift; sourceTree = "<group>"; };
+		3E1C8F8A2A1E540900962CDD /* featuredInfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = featuredInfoText.swift; sourceTree = "<group>"; };
+		3E1C8F8C2A1E5ADC00962CDD /* LargeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeImageView.swift; sourceTree = "<group>"; };
 		3E3028F62A16203C00F25ECE /* RequiredFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldModifier.swift; sourceTree = "<group>"; };
 		3E3028FA2A1632F200F25ECE /* MapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageView.swift; sourceTree = "<group>"; };
 		3E3028FE2A1636DB00F25ECE /* HeaderImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageSize.swift; sourceTree = "<group>"; };
@@ -85,7 +88,6 @@
 		3EEA476E2A1282D7008AB5FA /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
 		3EF553AB2A177E7D004F1D97 /* CopyrightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightView.swift; sourceTree = "<group>"; };
 		3EF553B52A178E3A004F1D97 /* LargeViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewHeader.swift; sourceTree = "<group>"; };
-		3EF553B72A1798FA004F1D97 /* LargeViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewButton.swift; sourceTree = "<group>"; };
 		3EF553D92A17B7EA004F1D97 /* ScrollingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHeaderView.swift; sourceTree = "<group>"; };
 		3EF5F5EB2A14162F00363DF5 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		3EF5F5ED2A1418EE00363DF5 /* FeaturedScrollViewVans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedScrollViewVans.swift; sourceTree = "<group>"; };
@@ -185,7 +187,8 @@
 				3EF5F5EF2A14194C00363DF5 /* FeaturedScrollViewTrailers.swift */,
 				3E3029042A166F7D00F25ECE /* LargeViewInfoView.swift */,
 				3EF553B52A178E3A004F1D97 /* LargeViewHeader.swift */,
-				3EF553B72A1798FA004F1D97 /* LargeViewButton.swift */,
+				3E1C8F8A2A1E540900962CDD /* featuredInfoText.swift */,
+				3E1C8F8C2A1E5ADC00962CDD /* LargeImageView.swift */,
 			);
 			path = "Featured Views";
 			sourceTree = "<group>";
@@ -370,10 +373,11 @@
 				3EF5F6072A14EA6400363DF5 /* ServicesVerticalView.swift in Sources */,
 				3E3028FB2A1632F200F25ECE /* MapImageView.swift in Sources */,
 				3EEA475D2A1260DB008AB5FA /* ScrollingHeader.swift in Sources */,
+				3E1C8F8B2A1E540900962CDD /* featuredInfoText.swift in Sources */,
+				3E1C8F8D2A1E5ADC00962CDD /* LargeImageView.swift in Sources */,
 				3EEA476B2A127470008AB5FA /* MapView.swift in Sources */,
 				3EF5F5FD2A14D68500363DF5 /* RecoveryNews2.swift in Sources */,
 				3EEA47612A126496008AB5FA /* MainView.swift in Sources */,
-				3EF553B82A1798FA004F1D97 /* LargeViewButton.swift in Sources */,
 				3EEA474F2A125FC8008AB5FA /* kerrandsmithApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.25;
+				CURRENT_PROJECT_VERSION = 0.0.28;
 				DEVELOPMENT_ASSET_PATHS = "\"kerrandsmith/Preview Content\"";
 				DEVELOPMENT_TEAM = V53QHKZTNF;
 				ENABLE_PREVIEWS = YES;
@@ -535,7 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.25;
+				CURRENT_PROJECT_VERSION = 0.0.28;
 				DEVELOPMENT_ASSET_PATHS = "\"kerrandsmith/Preview Content\"";
 				DEVELOPMENT_TEAM = V53QHKZTNF;
 				ENABLE_PREVIEWS = YES;
