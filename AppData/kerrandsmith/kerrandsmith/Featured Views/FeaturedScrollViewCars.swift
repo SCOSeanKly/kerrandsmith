@@ -16,6 +16,7 @@ struct FeaturedScrollViewCars: View {
     
     var body: some View {
         VStack {
+            
             if !viewModel.images.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
@@ -45,6 +46,7 @@ struct URLImageView: View {
     @State private var showingAlert = false
     let imageWidth = UIScreen.main.bounds.width * 0.65
     let imageHeight = UIScreen.main.bounds.width * 0.45
+ 
     
     init(image: ImageModel) {
         self.image = image

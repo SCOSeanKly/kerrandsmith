@@ -9,7 +9,8 @@ import SwiftUI
 
 class DataViewModel: ObservableObject {
     @Published var images: [ImageModel] = []
-    
+    @Published var loadedImageCount = 0
+
     func loadImages(fromURLString urlString: String, baseURLString: String) {
         guard let url = URL(string: urlString) else {
             return
@@ -55,6 +56,8 @@ class DataViewModel: ObservableObject {
 
                             return ImageModel(imageUrlLowRes: imageUrlLowRes, title: title, subtitle: subtitle, price: price, image1: image1, image2: image2, image3: image3, image4: image4, image5: image5)
                         }
+
+                        self.updateLoadedImageCount()
                     }
                 }
             } catch {
@@ -62,8 +65,11 @@ class DataViewModel: ObservableObject {
             }
         }.resume()
     }
-}
 
+    private func updateLoadedImageCount() {
+        loadedImageCount = images.count
+    }
+}
 
 struct ImageModel: Identifiable {
     let id = UUID()
