@@ -18,9 +18,11 @@ struct OpenOrClosedView: View {
         case 7: // Saturday
             return currentTime <= 1300
         default: // Monday to Friday
-            return currentTime <= 1730
+            let closingTime = today == 6 ? 1300 : 1730
+            return currentTime <= closingTime
         }
     }
+
 
     var body: some View {
         HStack (spacing: 0){
@@ -44,16 +46,29 @@ struct OpenOrClosedView: View {
     
     private func remainingTime() -> String {
         let closingTime = today == 7 ? 1300 : 1730
-        let remainingMinutes = (closingTime - currentTime) % 100
-        let remainingHours = (closingTime - currentTime) / 100
-        return String(format: "%02d hrs %02d mins", remainingHours, remainingMinutes)
+        
+        // Convert closingTime to 12-hour format
+        let closingHours = closingTime / 100
+        let closingMinutes = closingTime % 100
+        let formattedClosingTime = Calendar.current.date(bySettingHour: closingHours, minute: closingMinutes, second: 0, of: Date()) ?? Date()
+
+        let remainingMinutes = Calendar.current.dateComponents([.minute], from: Date(), to: formattedClosingTime).minute ?? 0
+        let remainingHours = remainingMinutes / 60
+        let remainingMinutesMod60 = remainingMinutes % 60
+
+        let hoursText = remainingHours < 2 ? "hr" : "hrs"
+        let minutesText = remainingMinutesMod60 < 2 ? "min" : "mins"
+        
+        return String(format: "%02d %@ %02d %@", remainingHours, hoursText, remainingMinutesMod60, minutesText)
     }
-    
+
+
     private func startTimer() {
         Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
             currentTime = Calendar.current.component(.hour, from: Date()) * 100 + Calendar.current.component(.minute, from: Date())
         }
     }
+
 }
 
 struct OpenOrClosedView_Previews: PreviewProvider {
