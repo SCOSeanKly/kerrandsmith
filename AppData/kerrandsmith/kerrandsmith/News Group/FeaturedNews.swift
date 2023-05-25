@@ -19,7 +19,7 @@ struct FeaturedNews: View {
     
     var body: some View {
         
-        newsInsertView(titleText: newsItem?.title ?? "", subTitleText: newsItem?.body ?? "", lineLimit: 5, showCallUs: true, showWebLink: false, webLink: "", systemImage: "phone", linkText: "Arrange a test drive", linkColour: Color.green)
+        NewsInsertView(titleText: newsItem?.title ?? "", subTitleText: newsItem?.body ?? "", lineLimit: 5, showCallUs: true, showWebLink: false, webLink: "", systemImage: "phone", linkText: "Arrange a test drive", linkColour: Color.green)
             .onAppear {
                 fetchNews()
             }

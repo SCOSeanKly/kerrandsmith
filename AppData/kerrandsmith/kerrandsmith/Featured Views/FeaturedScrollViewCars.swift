@@ -46,7 +46,7 @@ struct URLImageView: View {
     @State private var showingAlert = false
     let imageWidth = UIScreen.main.bounds.width * 0.65
     let imageHeight = UIScreen.main.bounds.width * 0.45
- 
+    
     
     init(image: ImageModel) {
         self.image = image
@@ -99,44 +99,17 @@ struct URLImageView: View {
                 ScrollView {
                     VStack (alignment: .center) {
                         LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle, priceString: image.price)
-                
-                            Button {
-                                saveImageToPhotoAlbum(image.image1)
-                                showingAlert.toggle()
-                            } label: {
-                                LargeImageView(imageURL: image.image1)
-                            }
-                        
-                        
-                        Button {
-                            saveImageToPhotoAlbum(image.image2)
-                            showingAlert.toggle()
-                        } label: {
-                            LargeImageView(imageURL: image.image2)
-                        }
-                        
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert, imageSource: image.image1, imageIndex: 1)
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image2, imageIndex: 2)
                         LargeViewInfoView()
-                        
-                        Button {
-                            saveImageToPhotoAlbum(image.image3)
-                            showingAlert.toggle()
-                        } label: {
-                            LargeImageView(imageURL: image.image3)
-                        }
-                        
-                        Button {
-                            saveImageToPhotoAlbum(image.image4)
-                            showingAlert.toggle()
-                        } label: {
-                            LargeImageView(imageURL: image.image4)
-                        }
-                        
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image3, imageIndex: 3)
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image4, imageIndex: 4)
                         CopyrightView()
                     }
                 }
                 .alert("Saved to Photos Album", isPresented: $showingAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                    Button("OK", role: .cancel) { }
+                }
                 .prefersPersistentSystemOverlaysHidden()
             }
             
@@ -150,7 +123,7 @@ struct URLImageView: View {
             // Handle invalid URL
             return
         }
-
+        
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
             if let error = error {
@@ -158,12 +131,12 @@ struct URLImageView: View {
                 print("Error: \(error)")
                 return
             }
-
+            
             guard let data = data else {
                 // Handle missing data
                 return
             }
-
+            
             DispatchQueue.main.async {
                 if let image = UIImage(data: data) {
                     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
@@ -172,7 +145,7 @@ struct URLImageView: View {
                 }
             }
         }
-
+        
         task.resume()
     }
 }

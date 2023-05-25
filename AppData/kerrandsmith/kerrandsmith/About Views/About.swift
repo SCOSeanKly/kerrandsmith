@@ -52,6 +52,7 @@ struct About: View {
                     }
                 }
                 
+            
                 HStack {
                     Text("If you require any more information, please contact us.")
                         .font(.footnote)
@@ -61,6 +62,8 @@ struct About: View {
                     
                    Spacer()
                 }
+                
+                OpeningHours()
                 
                 CallUsButton(phoneNumber: "01290422440", buttonText: "Call Us")
                     .padding(.bottom, 50)

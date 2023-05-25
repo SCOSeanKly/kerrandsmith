@@ -41,13 +41,12 @@ struct MainView: View {
         .environment(\.colorScheme, .light) // or .light
         .environment(\.sizeCategory, .small)
     }
+       
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .preferredColorScheme(.light)
-            .environment(\.colorScheme, .light) // or .light
-            .environment(\.sizeCategory, .small)
+          
     }
 }

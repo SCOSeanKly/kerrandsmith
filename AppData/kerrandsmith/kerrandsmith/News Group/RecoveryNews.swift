@@ -13,7 +13,7 @@ struct RecoveryNews: View {
     
     var body: some View {
         
-        newsInsertView(titleText: newsItem?.title ?? "", subTitleText: newsItem?.body ?? "", lineLimit: 5, showCallUs: false, showWebLink: false, webLink: "", systemImage: "phone", linkText: "", linkColour: Color.green)
+        NewsInsertView(titleText: newsItem?.title ?? "", subTitleText: newsItem?.body ?? "", lineLimit: 5, showCallUs: false, showWebLink: false, webLink: "", systemImage: "phone", linkText: "", linkColour: Color.green)
             .onAppear {
                 fetchRecoveryNews()
             }

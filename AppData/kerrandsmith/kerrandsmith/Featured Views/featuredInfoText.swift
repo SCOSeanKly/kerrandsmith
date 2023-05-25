@@ -37,7 +37,7 @@ struct featuredInfoText: View {
     var body: some View {
         VStack {
             HStack {
-                Text(image.title.capitalized)
+                Text(image.title.uppercased())
                     .font(.subheadline)
                     .fontWeight(.semibold)
                                

@@ -11,7 +11,7 @@ struct FeaturedView: View {
     
     var body: some View {
         VStack {
-            
+           
             FeaturedNews()
             
             FeaturedHeader(featuredText: "Featured Cars")
@@ -28,6 +28,7 @@ struct FeaturedView: View {
             FeaturedHeader(featuredText: "Featured Trailers")
             
             FeaturedScrollViewTrailers()
+                .padding(.bottom, 50)
         }
     }
 }

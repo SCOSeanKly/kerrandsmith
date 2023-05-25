@@ -45,17 +45,18 @@ struct URLImageViewTrailers: View {
     @State private var mailData: ComposeMailData
     let imageWidth = UIScreen.main.bounds.width * 0.65
     let imageHeight = UIScreen.main.bounds.width * 0.45
+    @State private var showingAlert = false
     
     init(image: ImageModel) {
         self.image = image
         _mailData = State(initialValue: ComposeMailData(subject: "Enquiry Type: [Trailers] with Kerr & Smith Cumnock",
-                                                       recipients: ["ske@kerrandsmith.co.uk"],
+                                                        recipients: ["ske@kerrandsmith.co.uk"],
                                                         message: """
                                                         \(image.title)\n\(image.subtitle)
                                                         
                                                         Enquiry:
                                                         """,
-                                                       attachments: []))}
+                                                        attachments: []))}
     
     var body: some View {
         VStack {
@@ -64,16 +65,16 @@ struct URLImageViewTrailers: View {
                 case .empty:
                     ProgressView()
                 case .success(let loadedImage):
-                        loadedImage
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .overlay {
-                                Button {
-                                    showLargeImage = true
-                                }label: {
-                                    LargeImageViewButton(systemImage: "camera.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
-                                }
+                    loadedImage
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .overlay {
+                            Button {
+                                showLargeImage = true
+                            }label: {
+                                LargeImageViewButton(systemImage: "camera.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
                             }
+                        }
                 case .failure:
                     Image(systemName: "exclamationmark.triangle")
                 @unknown default:
@@ -91,14 +92,20 @@ struct URLImageViewTrailers: View {
                     .frame(width: 40, height: 6)
                     .foregroundColor(Color.gray.opacity(0.5))
                     .padding(.top, 8)
+                
                 ScrollView {
-                    LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle, priceString: image.price)
-                    LargeImageView(imageURL: image.image1)
-                    LargeImageView(imageURL: image.image2)
-                    LargeViewInfoView()
-                    LargeImageView(imageURL: image.image3)
-                    LargeImageView(imageURL: image.image4)
-                    CopyrightView()
+                    VStack (alignment: .center) {
+                        LargeViewHeader(showContactFormView: $showContactFormView, titleString: image.title, subtitleString: image.subtitle, priceString: image.price)
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert, imageSource: image.image1, imageIndex: 1)
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image2, imageIndex: 2)
+                        LargeViewInfoView()
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image3, imageIndex: 3)
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image4, imageIndex: 4)
+                        CopyrightView()
+                    }
+                }
+                .alert("Saved to Photos Album", isPresented: $showingAlert) {
+                    Button("OK", role: .cancel) { }
                 }
                 .prefersPersistentSystemOverlaysHidden()
             }
@@ -106,6 +113,36 @@ struct URLImageViewTrailers: View {
             featuredInfoText(image: image)
             
         }
+    }
+    func saveImageToPhotoAlbum(_ imageURL: String) {
+        guard let url = URL(string: imageURL) else {
+            // Handle invalid URL
+            return
+        }
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                // Handle network error
+                print("Error: \(error)")
+                return
+            }
+            
+            guard let data = data else {
+                // Handle missing data
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if let image = UIImage(data: data) {
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                } else {
+                    // Handle failed image creation
+                }
+            }
+        }
+        
+        task.resume()
     }
 }
 

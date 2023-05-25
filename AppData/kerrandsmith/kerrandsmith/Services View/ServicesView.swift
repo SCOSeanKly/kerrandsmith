@@ -87,11 +87,14 @@ struct ServicesView: View {
                     
                 }
                 .padding()
+                .padding(.bottom, 50)
                 
                 Spacer()
             }
+           
           
         }
+     
         .sheet(isPresented: $showBookingForm){
             MailView(data: $mailData) { result in
                 print(result)

@@ -8,11 +8,12 @@
 import SwiftUI
 import UIKit
 
-struct newsInsertView: View {
-    
+struct NewsInsertView: View {
     let screenWidth = UIScreen.main.bounds.width
-    @State private var showContactFormView: Bool = false
+    
+    @State private var showContactFormView = false
     @State private var rectangleColor: Color = .blue
+    
     let titleText: String
     let subTitleText: String
     let lineLimit: Int
@@ -25,7 +26,6 @@ struct newsInsertView: View {
     
     var body: some View {
         ZStack {
-            
             VStack {
                 HStack {
                     Text(titleText)
@@ -35,26 +35,22 @@ struct newsInsertView: View {
                     
                     Spacer()
                 }
-                .padding(.horizontal)
                 .padding(.bottom, 5)
                 
                 HStack {
                     Text(subTitleText)
                         .font(.footnote)
-                        .lineLimit(5)
+                        .lineLimit(lineLimit)
                         .multilineTextAlignment(.leading)
                         .opacity(0.8)
                     
                     Spacer()
                 }
-                .padding(.horizontal)
-                
                 
                 if showCallUs {
                     HStack {
-                       
                         Button(action: {
-                            if let url = URL(string: "tel:\(01290422440)") {
+                            if let url = URL(string: "tel:01290422440") {
                                 UIApplication.shared.open(url)
                             }
                         }) {
@@ -62,34 +58,24 @@ struct newsInsertView: View {
                                 .font(.caption)
                                 .foregroundColor(linkColour)
                                 .fontWeight(.semibold)
-//                                .padding(.all, 5)
-//                                .background(.regularMaterial)
-//                                .clipShape(RoundedRectangle(cornerRadius: 5))
                                 .padding(.top, 5)
                         }
                         
                         Spacer()
                     }
-                    .padding(.trailing)
                 } else if showWebLink {
                     HStack {
-                        
                         Button(action: {
                             openWebAddress(webLink)
-                            }
-                        ) {
+                        }) {
                             Text("\(Image(systemName: systemImage)) \(linkText)")
                                 .font(.caption)
                                 .foregroundColor(linkColour)
                                 .fontWeight(.semibold)
-//                                .padding(.all, 5)
-//                                .background(.regularMaterial)
-//                                .clipShape(RoundedRectangle(cornerRadius: 5))
                                 .padding(.top, 5)
                         }
                         Spacer()
                     }
-                    .padding(.trailing)
                 }
             }
             .padding()
@@ -103,7 +89,6 @@ struct newsInsertView: View {
     }
     
     func openWebAddress(_ address: String) {
-        // Open the web address
         if let url = URL(string: address) {
             UIApplication.shared.open(url)
         }
@@ -111,22 +96,10 @@ struct newsInsertView: View {
     
     func generateRandomColor() {
         let colors: [Color] = [
-            .cyan,
-            .orange,
-            .teal,
-            .indigo,
-            .brown,
-            .red,
-            .green,
-            .blue,
-            .yellow,
-            .pink,
-            .purple,
-            .primary,
-            .secondary
+            .cyan, .orange, .teal, .indigo, .brown, .red,
+            .green, .blue, .yellow, .pink, .purple,
+            .primary, .secondary
         ]
-
         rectangleColor = colors.randomElement() ?? .blue
     }
 }
-
