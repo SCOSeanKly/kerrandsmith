@@ -37,28 +37,33 @@ struct featuredInfoText: View {
     var body: some View {
         VStack {
             HStack {
-                Text(image.title)
+                Text(image.title.capitalized)
                     .font(.subheadline)
                     .fontWeight(.semibold)
+                               
                 Spacer()
             }
+
             HStack {
-                Text(image.subtitle)
+                Text(image.subtitle.capitalized)
                     .font(.footnote)
                     .opacity(0.8)
                     .lineLimit(1)
+                                
                 Spacer()
             }
+
             HStack {
-              
-                Text(image.price)
-                    .font(.footnote)
+                Text(image.price.capitalized)
+                    .font(.subheadline)
                     .fontWeight(.semibold)
                     .opacity(0.8)
                     .lineLimit(1)
                     .padding(.top, 5)
+                               
                 Spacer()
             }
+
             
             if !MailView.canSendMail {
                 HStack {
