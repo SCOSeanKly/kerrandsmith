@@ -11,6 +11,7 @@ struct OpenOrClosedView: View {
     @State private var currentTime = Calendar.current.component(.hour, from: Date()) * 100 + Calendar.current.component(.minute, from: Date())
     let today = Calendar.current.component(.weekday, from: Date())
 
+    /* // This code showed us as being open before 8am.
     var isOpen: Bool {
         switch today {
         case 1: // Sunday
@@ -22,7 +23,20 @@ struct OpenOrClosedView: View {
             return currentTime <= closingTime
         }
     }
-
+    */
+    
+    var isOpen: Bool {
+        let openingTime = 800 // Opening time is set to 8:00 AM
+        switch today {
+        case 1: // Sunday
+            return false
+        case 7: // Saturday
+            return currentTime >= openingTime && currentTime <= 1300
+        default: // Monday to Friday
+            let closingTime = today == 6 ? 1300 : 1730
+            return currentTime >= openingTime && currentTime <= closingTime
+        }
+    }
 
     var body: some View {
         HStack (spacing: 0){
@@ -56,12 +70,15 @@ struct OpenOrClosedView: View {
         let remainingHours = remainingMinutes / 60
         let remainingMinutesMod60 = remainingMinutes % 60
 
-        let hoursText = remainingHours < 2 ? "hr" : "hrs"
-        let minutesText = remainingMinutesMod60 < 2 ? "min" : "mins"
-        
-        return String(format: "%02d %@ %02d %@", remainingHours, hoursText, remainingMinutesMod60, minutesText)
+        if remainingHours < 1 {
+            let minutesText = remainingMinutesMod60 < 2 ? "min" : "mins"
+            return String(format: "%02d %@", remainingMinutesMod60, minutesText)
+        } else {
+            let hoursText = remainingHours < 2 ? "hr" : "hrs"
+            let minutesText = remainingMinutesMod60 < 2 ? "min" : "mins"
+            return String(format: "%02d %@ %02d %@", remainingHours, hoursText, remainingMinutesMod60, minutesText)
+        }
     }
-
 
     private func startTimer() {
         Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
