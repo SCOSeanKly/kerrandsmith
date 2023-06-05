@@ -15,8 +15,13 @@ struct FeaturedScrollViewTrailers: View {
     let urlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/featured/featuredTrailers.json"
     let baseURLString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Trailers/"
     
+    @Binding var forceRefresh: Bool
+    
     var body: some View {
         VStack {
+            
+            FeaturedHeader(featuredText: "Featured Trailers", systemImage: "camera", text: "\(viewModel.images.count)")
+            
             if !viewModel.images.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
@@ -33,6 +38,12 @@ struct FeaturedScrollViewTrailers: View {
         }
         .onAppear {
             viewModel.loadImages(fromURLString: urlString, baseURLString: baseURLString)
+        }
+        .onChange(of: forceRefresh) { newValue in
+            if newValue {
+                viewModel.loadImages(fromURLString: urlString, baseURLString: baseURLString)
+                forceRefresh = false
+            }
         }
     }
 }
@@ -147,10 +158,4 @@ struct URLImageViewTrailers: View {
 }
 
 
-
-struct FeaturedScrollViewTrailers_Previews: PreviewProvider {
-    static var previews: some View {
-        FeaturedScrollViewTrailers()
-    }
-}
 

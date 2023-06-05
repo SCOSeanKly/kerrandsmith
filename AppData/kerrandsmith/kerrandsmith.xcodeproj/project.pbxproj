@@ -21,6 +21,8 @@
 		3E3029012A16541D00F25ECE /* HidePersistentOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3029002A16541D00F25ECE /* HidePersistentOverlay.swift */; };
 		3E3029032A165DF500F25ECE /* newsInsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3029022A165DF500F25ECE /* newsInsertView.swift */; };
 		3E3029052A166F7D00F25ECE /* LargeViewInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3029042A166F7D00F25ECE /* LargeViewInfoView.swift */; };
+		3E40BE522A2B5F1C00559B2C /* CustomRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E40BE512A2B5F1C00559B2C /* CustomRefreshView.swift */; };
+		3E6494F02A2DF6A3004E3671 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6494EF2A2DF6A3004E3671 /* Launch Screen.storyboard */; };
 		3E6A404A2A12912C0095A779 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A40492A12912C0095A779 /* AddressView.swift */; };
 		3E6A404E2A12D0CD0095A779 /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A404D2A12D0CD0095A779 /* FeaturedView.swift */; };
 		3E6A405A2A13999C0095A779 /* FeaturedScrollViewCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A40592A13999C0095A779 /* FeaturedScrollViewCars.swift */; };
@@ -35,7 +37,6 @@
 		3EEA475F2A126377008AB5FA /* ImageArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA475E2A126377008AB5FA /* ImageArrays.swift */; };
 		3EEA47612A126496008AB5FA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47602A126496008AB5FA /* MainView.swift */; };
 		3EEA47632A1264DF008AB5FA /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47622A1264DF008AB5FA /* About.swift */; };
-		3EEA47652A126708008AB5FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47642A126708008AB5FA /* HomeView.swift */; };
 		3EEA47672A126C22008AB5FA /* HeaderLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA47662A126C22008AB5FA /* HeaderLogoView.swift */; };
 		3EEA476B2A127470008AB5FA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA476A2A127470008AB5FA /* MapView.swift */; };
 		3EEA476D2A12826B008AB5FA /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA476C2A12826B008AB5FA /* ServicesView.swift */; };
@@ -76,6 +77,8 @@
 		3E3029002A16541D00F25ECE /* HidePersistentOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidePersistentOverlay.swift; sourceTree = "<group>"; };
 		3E3029022A165DF500F25ECE /* newsInsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsInsertView.swift; sourceTree = "<group>"; };
 		3E3029042A166F7D00F25ECE /* LargeViewInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewInfoView.swift; sourceTree = "<group>"; };
+		3E40BE512A2B5F1C00559B2C /* CustomRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRefreshView.swift; sourceTree = "<group>"; };
+		3E6494EF2A2DF6A3004E3671 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3E6A40492A12912C0095A779 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		3E6A404D2A12D0CD0095A779 /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
 		3E6A40592A13999C0095A779 /* FeaturedScrollViewCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedScrollViewCars.swift; sourceTree = "<group>"; };
@@ -91,7 +94,6 @@
 		3EEA475E2A126377008AB5FA /* ImageArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArrays.swift; sourceTree = "<group>"; };
 		3EEA47602A126496008AB5FA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3EEA47622A1264DF008AB5FA /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		3EEA47642A126708008AB5FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3EEA47662A126C22008AB5FA /* HeaderLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLogoView.swift; sourceTree = "<group>"; };
 		3EEA476A2A127470008AB5FA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3EEA476C2A12826B008AB5FA /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
@@ -132,9 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				3EF553D92A17B7EA004F1D97 /* ScrollingHeaderView.swift */,
-				3EEA47642A126708008AB5FA /* HomeView.swift */,
 				3EEA475C2A1260DB008AB5FA /* ScrollingHeader.swift */,
 				3EEA47662A126C22008AB5FA /* HeaderLogoView.swift */,
+				3EF5F60C2A15094400363DF5 /* Services View */,
 			);
 			path = "Header Views";
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 		3EEA47422A125FC8008AB5FA = {
 			isa = PBXGroup;
 			children = (
+				3E6494EF2A2DF6A3004E3671 /* Launch Screen.storyboard */,
 				3EEA47522A125FC8008AB5FA /* Assets.xcassets */,
 				3EEA474D2A125FC8008AB5FA /* kerrandsmith */,
 				3EEA474C2A125FC8008AB5FA /* Products */,
@@ -167,12 +170,12 @@
 				3EF5F6052A14E4BB00363DF5 /* Arrays */,
 				3EF5F6132A151B4E00363DF5 /* About Views */,
 				3E3029062A1670FC00F25ECE /* Header Views */,
-				3EF5F60C2A15094400363DF5 /* Services View */,
 				3EF5F6042A14E4AA00363DF5 /* Contact Views */,
 				3EF5F5F92A14C72500363DF5 /* Recovery Views */,
 				3EF5F5F32A14247B00363DF5 /* Featured Views */,
 				3EF5F5F62A14C36A00363DF5 /* News Group */,
 				3EEA47542A125FC8008AB5FA /* Preview Content */,
+				3E40BE512A2B5F1C00559B2C /* CustomRefreshView.swift */,
 			);
 			path = kerrandsmith;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6494F02A2DF6A3004E3671 /* Launch Screen.storyboard in Resources */,
 				3EEA47562A125FC8008AB5FA /* Preview Assets.xcassets in Resources */,
 				3EEA47532A125FC8008AB5FA /* Assets.xcassets in Resources */,
 			);
@@ -355,7 +359,6 @@
 				3E1C8F952A1F9F2400962CDD /* LargeImageSaveToAlbumswift.swift in Sources */,
 				3E6A404A2A12912C0095A779 /* AddressView.swift in Sources */,
 				3EEA47512A125FC8008AB5FA /* ContentView.swift in Sources */,
-				3EEA47652A126708008AB5FA /* HomeView.swift in Sources */,
 				3EF5F60B2A1503D900363DF5 /* BookingForm.swift in Sources */,
 				3E1142B02A1E3AC6008493CB /* ServicesNews3.swift in Sources */,
 				3EEA47632A1264DF008AB5FA /* About.swift in Sources */,
@@ -373,6 +376,7 @@
 				3EF5F5EC2A14162F00363DF5 /* DataViewModel.swift in Sources */,
 				3EF553DA2A17B7EA004F1D97 /* ScrollingHeaderView.swift in Sources */,
 				3EEA476D2A12826B008AB5FA /* ServicesView.swift in Sources */,
+				3E40BE522A2B5F1C00559B2C /* CustomRefreshView.swift in Sources */,
 				3EEA47672A126C22008AB5FA /* HeaderLogoView.swift in Sources */,
 				3EF5F6122A151B0D00363DF5 /* CallUsButton.swift in Sources */,
 				3EF5F5F02A14194C00363DF5 /* FeaturedScrollViewTrailers.swift in Sources */,
@@ -525,15 +529,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.37;
+				CURRENT_PROJECT_VERSION = 0.0.41;
 				DEVELOPMENT_ASSET_PATHS = "\"kerrandsmith/Preview Content\"";
 				DEVELOPMENT_TEAM = V53QHKZTNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Saved to Photos Album";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save Image to your Photos Album";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -559,15 +564,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.0.37;
+				CURRENT_PROJECT_VERSION = 0.0.41;
 				DEVELOPMENT_ASSET_PATHS = "\"kerrandsmith/Preview Content\"";
 				DEVELOPMENT_TEAM = V53QHKZTNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Saved to Photos Album";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save Image to your Photos Album";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

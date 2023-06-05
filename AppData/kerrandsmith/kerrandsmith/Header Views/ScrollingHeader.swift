@@ -10,32 +10,50 @@ import SwiftUI
 struct ScrollingHeader: View {
     @State private var currentIndex = 0
     private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
-    
     let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
     let imageHeight = UIScreen.main.bounds.width * 0.8
+    @Binding var forceRefresh: Bool
+    
     
     var body: some View {
-        ZStack {
+        
             VStack {
-                
-                ScrollView (showsIndicators: false) {
+             
+                if screenHeight == 932 || screenHeight == 852 { // check for iP14PM or iP14
+                    CustomRefreshView(showsIndicator: false) {
+                        
+                        HeaderLogoView()
+                        
+                        ScrollingHeaderViewImages()
+                        
+                        FeaturedView(forceRefresh: $forceRefresh)
+                        
+                    } onRefresh: {
+                        forceRefresh.toggle()
+                    }
+                } else {
                     
-                    ScrollingHeaderViewImages()
-                      
-                    FeaturedView()
+                    ScrollView(showsIndicators: false) {
+                        HeaderLogoView()
+                        
+                        ScrollingHeaderViewImages()
+                        
+                        FeaturedView(forceRefresh: $forceRefresh)
+                    }
                 }
-                
+               
                 Spacer()
+                
             }
-            HeaderLogoView()
-        }
-        .prefersPersistentSystemOverlaysHidden()
+            .ignoresSafeArea()
+            .prefersPersistentSystemOverlaysHidden()
     }
 }
 
 struct ScrollingHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollingHeader()
+        MainView()
             .preferredColorScheme(.light)
             .environment(\.colorScheme, .light) // or .light
             .environment(\.sizeCategory, .small)

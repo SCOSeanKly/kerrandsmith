@@ -25,14 +25,14 @@ struct HeaderLogoView: View {
                 VStack {
                     
                         HStack {
-                            VStack {
+                            
                                 Image("logo")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 130, height: 60)
+                                    .frame(width: 130, height: 100)
                                     .padding()
-                                    .offset(y: 10)
-                            }
+                                    .offset(y: 30)
+                            
                             
                             Spacer()
                             
@@ -51,20 +51,22 @@ struct HeaderLogoView: View {
                             } label: {
                                 Image(systemName: "globe")
                                     .font(.title)
+                                    .offset(y: 24)
                                     .padding()
                             }
                             
                         }
-                        .background(.ultraThinMaterial)
+                     //   .background(.ultraThinMaterial)
                     
                     
                     Spacer()
                 }
-                .frame(height: 60)
+                .frame(height: 100)
                 
                 Spacer()
                 
             }
+            .ignoresSafeArea()
         
     }
     

@@ -11,12 +11,13 @@ import SwiftUI
 struct MainView: View {
     
     @State private var showBookingForm: Bool = false
+    @State private var forceRefresh: Bool = false
     
     var body: some View {
         
         TabView {
             
-            ScrollingHeader()
+            ScrollingHeader(forceRefresh: $forceRefresh)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }

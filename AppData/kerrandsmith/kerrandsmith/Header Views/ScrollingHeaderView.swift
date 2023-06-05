@@ -18,10 +18,6 @@ struct ScrollingHeaderViewImages: View {
         ZStack {
             VStack {
                 
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(height: 60)
-                
                 if !viewModelHeader.images.isEmpty {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 0) {
@@ -62,8 +58,14 @@ struct ScrollingHeaderViewImages: View {
         .onAppear {
             viewModelHeader.loadImages()
         }
+        .onReceive(viewModelHeader.$forceRefresh) { refresh in
+            if refresh {
+                viewModelHeader.loadImages()
+            }
+        }
     }
 }
+
 
 
 
@@ -97,7 +99,6 @@ struct URLImageViewHeader: View {
                 }
             }
             .customFrame()
-            .cornerRadius(5)
         }
     }
 }
@@ -108,6 +109,13 @@ struct ImageModelHeader {
 
 class DataViewModelHeader: ObservableObject {
     @Published var images: [ImageModelHeader] = []
+    @Published var forceRefresh: Bool = false {
+        didSet {
+            if forceRefresh {
+                loadImages()
+            }
+        }
+    }
 
     func loadImages() {
         let baseUrlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/scrollingHeaderImages/headerImages/"
@@ -151,4 +159,5 @@ struct ScrollingHeaderViewImages_Previews: PreviewProvider {
         ScrollingHeaderViewImages()
     }
 }
+
 

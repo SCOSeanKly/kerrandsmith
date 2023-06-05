@@ -10,12 +10,16 @@ import SwiftUIMailView
 
 struct FeaturedScrollViewCars: View {
     @ObservedObject var viewModel = DataViewModel()
-    
+
     let urlString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/JSON/featured/featuredCars.json"
     let baseURLString = "https://raw.githubusercontent.com/SCOSeanKly/kerrandsmith/main/FeaturedImages/Cars/"
-    
+
+    @Binding var forceRefresh: Bool
+
     var body: some View {
         VStack {
+            
+            FeaturedHeader(featuredText: "Featured Cars", systemImage: "camera", text: "\(viewModel.images.count)")
             
             if !viewModel.images.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -34,8 +38,15 @@ struct FeaturedScrollViewCars: View {
         .onAppear {
             viewModel.loadImages(fromURLString: urlString, baseURLString: baseURLString)
         }
+        .onChange(of: forceRefresh) { newValue in
+            if newValue {
+                viewModel.loadImages(fromURLString: urlString, baseURLString: baseURLString)
+                forceRefresh = false
+            }
+        }
     }
 }
+
 
 struct URLImageView: View {
     let image: ImageModel
@@ -46,8 +57,8 @@ struct URLImageView: View {
     @State private var showingAlert = false
     let imageWidth = UIScreen.main.bounds.width * 0.65
     let imageHeight = UIScreen.main.bounds.width * 0.45
-    
-    
+   
+
     init(image: ImageModel) {
         self.image = image
         _mailData = State(initialValue: ComposeMailData(subject: "Enquiry Type: [Cars] with Kerr & Smith Cumnock",
@@ -150,11 +161,10 @@ struct URLImageView: View {
     }
 }
 
-
-
-
-struct FeaturedScrollViewCars_Previews: PreviewProvider {
-    static var previews: some View {
-        FeaturedScrollViewCars()
-    }
-}
+/*
+ struct FeaturedScrollViewCars_Previews: PreviewProvider {
+ static var previews: some View {
+ FeaturedScrollViewCars()
+ }
+ }
+ */
