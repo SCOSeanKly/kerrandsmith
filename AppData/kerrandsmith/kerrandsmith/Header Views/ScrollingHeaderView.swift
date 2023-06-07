@@ -46,9 +46,6 @@ struct ScrollingHeaderViewImages: View {
                     }
                     .padding(.top, -28)
                     
-                    
-                    
-                    
                 } else {
                     Text("Loading images...")
                 }

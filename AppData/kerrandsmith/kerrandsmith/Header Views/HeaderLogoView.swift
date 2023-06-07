@@ -33,7 +33,6 @@ struct HeaderLogoView: View {
                                     .padding()
                                     .offset(y: 30)
                             
-                            
                             Spacer()
                             
                             Menu {

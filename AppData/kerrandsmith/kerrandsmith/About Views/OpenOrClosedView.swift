@@ -10,20 +10,6 @@ import SwiftUI
 struct OpenOrClosedView: View {
     @State private var currentTime = Calendar.current.component(.hour, from: Date()) * 100 + Calendar.current.component(.minute, from: Date())
     let today = Calendar.current.component(.weekday, from: Date())
-
-    /* // This code showed us as being open before 8am.
-    var isOpen: Bool {
-        switch today {
-        case 1: // Sunday
-            return false
-        case 7: // Saturday
-            return currentTime <= 1300
-        default: // Monday to Friday
-            let closingTime = today == 6 ? 1300 : 1730
-            return currentTime <= closingTime
-        }
-    }
-    */
     
     var isOpen: Bool {
         let openingTime = 800 // Opening time is set to 8:00 AM

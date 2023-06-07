@@ -20,7 +20,7 @@ struct FeaturedScrollViewTrailers: View {
     var body: some View {
         VStack {
             
-            FeaturedHeader(featuredText: "Featured Trailers", systemImage: "camera", text: "\(viewModel.images.count)")
+            FeaturedHeader(featuredText: "Featured Trailers", systemImage: "arrow.triangle.2.circlepath.camera", text: "\(viewModel.images.count)", forceRefresh: $forceRefresh)
             
             if !viewModel.images.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -74,18 +74,24 @@ struct URLImageViewTrailers: View {
             AsyncImage(url: URL(string: image.imageUrlLowRes)) { phase in
                 switch phase {
                 case .empty:
-                    ProgressView()
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.gray, lineWidth: 0.5)
+                        
+                        ProgressView()
+                    }
                 case .success(let loadedImage):
-                    loadedImage
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .overlay {
-                            Button {
-                                showLargeImage = true
-                            }label: {
-                                LargeImageViewButton(systemImage: "camera.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
-                            }
+                    ZStack {
+                        loadedImage
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                        Button {
+                            showLargeImage = true
+                        } label: {
+                            LargeImageViewButton(systemImage: "camera.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
                         }
+                    }
+                        
                 case .failure:
                     Image(systemName: "exclamationmark.triangle")
                 @unknown default:
@@ -112,6 +118,7 @@ struct URLImageViewTrailers: View {
                         LargeViewInfoView()
                         LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image3, imageIndex: 3)
                         LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert,imageSource: image.image4, imageIndex: 4)
+                        LargeImageSaveToAlbumswift(image: image, showingAlert: $showingAlert, imageSource: image.image4, imageIndex: 5)
                         CopyrightView()
                     }
                 }

@@ -62,15 +62,20 @@ struct About: View {
                    Spacer()
                 }
                
-                OpeningHours()
-                
-                CallUsButton(phoneNumber: "01290422440", buttonText: "Call Us")
-                    .padding(.bottom)
-                
-                SocialMediaView()
-                    .padding(.bottom, 50)
+                Group {
+                    OpeningHours()
+                    
+                    CallUsButton(phoneNumber: "01290422440", buttonText: "Call Us")
+                        .padding(.bottom)
+                    
+                    SocialMediaView()
+                    
+                    AboutCopyrightView()
+                        .padding(.bottom, 50)
+                }
                 
                 Spacer()
+                
             }
         }
     }

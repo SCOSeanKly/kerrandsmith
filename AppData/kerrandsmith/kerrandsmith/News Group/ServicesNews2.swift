@@ -14,7 +14,7 @@ struct ServicesNews2: View {
     
     var body: some View {
         
-        NewsInsertView(titleText: newsItem?.title ?? "", subTitleText: newsItem?.body ?? "", lineLimit: 5, showCallUs: true, showWebLink: false, webLink: "https://www.kerrandsmithvauxhall.co.uk/service/", systemImage: "phone", linkText: "Call Us", linkColour: Color.accentColor)
+        NewsInsertView(titleText: newsItem?.title ?? "", subTitleText: newsItem?.body ?? "", lineLimit: 5, showCallUs: false, showWebLink: false, webLink: "https://www.kerrandsmithvauxhall.co.uk/service/", systemImage: "", linkText: "", linkColour: Color.accentColor)
             .onAppear {
                 fetchNews()
             }

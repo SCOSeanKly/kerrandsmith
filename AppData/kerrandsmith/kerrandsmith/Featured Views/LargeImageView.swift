@@ -17,28 +17,54 @@ struct LargeImageView: View {
         AsyncImage(url: URL(string: imageURL)) { phase in
             switch phase {
             case .empty:
-                ProgressView()
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 0.5)
+                        .frame(width: imageWidth, height: imageHeight, alignment: .center)
+                    
+                    ProgressView()
+                }
             case .success(let loadedImage):
                 ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 0.5)
+                        .frame(width: imageWidth, height: imageHeight, alignment: .center)
                     
                     loadedImage
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .clipped()
                         .cornerRadius(5)
-                        .offset(x: offset)
-                    
+                       
                     LargeImageViewButton(systemImage: "square.and.arrow.down.fill", imageWidth: imageWidth, imageHeight: imageHeight, tintColour: Color.white)
                         .disabled(true)
                 }
+                .offset(x: offset)
             case .failure:
                 
-                VStack {
-                    Image(systemName: "exclamationmark.triangle")
-                        .foregroundColor(.red)
-                    Text("Image Coming Soon")
-                        .font(.footnote)
+                ZStack {
+                    HStack {
+                        Spacer()
+                        VStack(alignment: .center) {
+                            Image(systemName: "exclamationmark.triangle")
+                                .foregroundColor(.red)
+                            Text("Image Coming Soon")
+                                .font(.footnote)
+                        }
+                        Spacer()
+                    }
+                    .frame(width: imageWidth, height: imageHeight, alignment: .center)
+                    .padding(.bottom, 5.0)
+                    
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 0.5)
+                        .frame(width: imageWidth, height: imageHeight, alignment: .center)
                 }
+                .offset(x: offset)
+
+                
             @unknown default:
                 EmptyView()
             }
@@ -48,28 +74,5 @@ struct LargeImageView: View {
     }
 }
 
-struct LargeImageViewButton: View {
-    
-    let systemImage: String
-    
-    let imageWidth: CGFloat
-    let imageHeight: CGFloat
-    let tintColour: Color
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Image(systemName: systemImage)
-                    .font(.headline)
-                    .foregroundColor(tintColour)
-                    .shadow(radius: 2)
-            }
-            .padding()
-        }
-        .frame(width: imageWidth, height: imageHeight, alignment: .center)
-        .padding(.bottom, 5.0)
-    }
-}
+
 
