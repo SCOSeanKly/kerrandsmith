@@ -10,39 +10,6 @@
       "image3": "SsangYong4.jpg",
       "image4": "SsangYong1.jpg",
       "image5": "SsangYong2.jpg"
-    },
-    {
-      "imageName": "SsangYong1.jpg",
-      "title": "Trailer Title",
-      "subtitle": "Trailer Sub_Title",
-      "price": "Some Price2",
-      "image1": "SsangYong2.jpg",
-      "image2": "SsangYong3.jpg",
-      "image3": "SsangYong4.jpg",
-      "image4": "SsangYong1.jpg",
-      "image5": "SsangYong2.jpg"
-    },
-     {
-      "imageName": "SsangYong1.jpg",
-      "title": "Trailer Title",
-      "subtitle": "Trailer Sub_Title",
-       "price": "Some Price3",
-      "image1": "SsangYong2.jpg",
-      "image2": "SsangYong3.jpg",
-      "image3": "SsangYong4.jpg",
-      "image4": "SsangYong1.jpg",
-      "image5": "SsangYong2.jpg"
-    },
-     {
-      "imageName": "SsangYong1.jpg",
-      "title": "Trailer Title",
-      "subtitle": "Trailer Sub_Title",
-       "price": "Some Price4",
-      "image1": "SsangYong2.jpg",
-      "image2": "SsangYong3.jpg",
-      "image3": "SsangYong4.jpg",
-      "image4": "SsangYong1.jpg",
-      "image5": "SsangYong2.jpg"
     }
   ]
 }
